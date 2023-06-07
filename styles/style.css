@@ -42,7 +42,7 @@ header nav {
 }
 .timeline .stripe {
   width: 3px;
-  height: 100vh;
+  height: 100rem;
   border-radius: 5px;
   background-color: var(--darkred);
   margin-left: calc(50% - 1.5px);

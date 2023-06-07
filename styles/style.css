@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: red;
+  --darkred: darkred;
+  --white: white;
+  --yellow: yellow;
+  --blue: blue;
+  --black: black;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  margin-bottom: 5rem;
+}
+header nav {
+  background-color: var(--darkred);
+  padding: 1rem;
+}
+
+.timeline {
+  position: relative;
+}
+.timeline .stripe {
+  width: 3px;
+  height: 100vh;
+  border-radius: 5px;
+  background-color: var(--darkred);
+  margin-left: calc(50% - 1.5px);
+  position: absolute;
+}
+.timeline .block {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  padding: 8rem 2rem;
+  transition: ease-out 1s;
+}
+.timeline .block.left {
+  flex-direction: row-reverse;
+  left: -55vw;
+}
+.timeline .block.left:hover {
+  left: 2vw;
+}
+.timeline .block.left section:last-of-type {
+  width: 55%;
+  left: 0;
+}
+.timeline .block.right {
+  flex-direction: row;
+  right: -55vw;
+}
+.timeline .block.right:hover {
+  right: 2vw;
+}
+.timeline .block.right section:last-of-type {
+  width: 55%;
+  right: 0;
+}
+.timeline .block:first-of-type {
+  top: 5rem;
+}
+.timeline .block section {
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

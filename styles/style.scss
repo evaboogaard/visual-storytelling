@@ -4,11 +4,10 @@
 }
 
 :root {
-  --red: red;
-  --darkred: darkred;
+  --darkred: #a41b30;
   --white: white;
-  --yellow: yellow;
-  --blue: blue;
+  --sunray: #d7ad51;
+  --lapis: #15639e;
   --black: black;
 }
 
@@ -32,10 +31,31 @@ a {
 header {
   nav {
     background-color: var(--darkred);
-    padding: 1rem;
+    padding: 1rem 4rem;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        height: 4rem;
+      }
+    }
   }
 
   margin-bottom: 5rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+  gap: 1rem;
+
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .timeline {
@@ -92,6 +112,10 @@ header {
 
     section {
       position: absolute;
+
+      &:last-of-type {
+        background-color: var(--white);
+      }
     }
   }
 }

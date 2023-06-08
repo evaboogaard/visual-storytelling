@@ -78,6 +78,11 @@ header {
     align-items: center;
     padding: 8rem 2rem;
     transition: ease-out 1s;
+    opacity: 0;
+
+    &.fade {
+      opacity: 1;
+    }
 
     &.left {
       flex-direction: row-reverse;
@@ -85,6 +90,12 @@ header {
 
       &:hover {
         left: 2vw;
+      }
+
+      section:first-of-type {
+        &::after {
+          right: -3.5rem;
+        }
       }
 
       section:last-of-type {
@@ -104,6 +115,12 @@ header {
         right: 2vw;
       }
 
+      section:first-of-type {
+        &::after {
+          left: -4rem;
+        }
+      }
+
       section:last-of-type {
         width: 55%;
         right: 0;
@@ -113,12 +130,22 @@ header {
       }
     }
 
-    &:first-of-type {
-      top: 5rem;
-    }
-
     section {
       position: absolute;
+
+      &:first-of-type {
+        top: 5rem;
+
+        &::after {
+          content: '';
+          background-color: var(--darkred);
+          display: block;
+          width: 2rem;
+          height: 0.1rem;
+          position: absolute;
+          top: 0.9rem;
+        }
+      }
 
       &:last-of-type {
         background-color: var(--grey);

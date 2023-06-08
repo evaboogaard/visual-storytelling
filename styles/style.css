@@ -74,6 +74,10 @@ header nav ul img {
   align-items: center;
   padding: 8rem 2rem;
   transition: ease-out 1s;
+  opacity: 0;
+}
+.timeline .block.fade {
+  opacity: 1;
 }
 .timeline .block.left {
   flex-direction: row-reverse;
@@ -81,6 +85,9 @@ header nav ul img {
 }
 .timeline .block.left:hover {
   left: 2vw;
+}
+.timeline .block.left section:first-of-type::after {
+  right: -3.5rem;
 }
 .timeline .block.left section:last-of-type {
   width: 55%;
@@ -96,6 +103,9 @@ header nav ul img {
 .timeline .block.right:hover {
   right: 2vw;
 }
+.timeline .block.right section:first-of-type::after {
+  left: -4rem;
+}
 .timeline .block.right section:last-of-type {
   width: 55%;
   right: 0;
@@ -103,11 +113,20 @@ header nav ul img {
   border-top: 2rem solid var(--lapis);
   box-shadow: 0.5rem 0.5rem 0 var(--darkred);
 }
-.timeline .block:first-of-type {
-  top: 5rem;
-}
 .timeline .block section {
   position: absolute;
+}
+.timeline .block section:first-of-type {
+  top: 5rem;
+}
+.timeline .block section:first-of-type::after {
+  content: "";
+  background-color: var(--darkred);
+  display: block;
+  width: 2rem;
+  height: 0.1rem;
+  position: absolute;
+  top: 0.9rem;
 }
 .timeline .block section:last-of-type {
   background-color: var(--grey);

@@ -6,6 +6,7 @@
 :root {
   --darkred: #a41b30;
   --white: white;
+  --grey: #f3f3f3;
   --sunray: #d7ad51;
   --lapis: #15639e;
   --black: black;
@@ -63,7 +64,7 @@ header {
 
   .stripe {
     width: 3px;
-    height: 100rem;
+    height: 200rem;
     border-radius: 5px;
     background-color: var(--darkred);
     margin-left: calc(50% - 1.5px);
@@ -80,7 +81,7 @@ header {
 
     &.left {
       flex-direction: row-reverse;
-      left: -55vw;
+      left: -66vw;
 
       &:hover {
         left: 2vw;
@@ -89,12 +90,15 @@ header {
       section:last-of-type {
         width: 55%;
         left: 0;
+        border-bottom: 2rem solid var(--lapis);
+        border-top: 2rem solid var(--darkred);
+        box-shadow: 0.5rem 0.5rem 0 var(--sunray);
       }
     }
 
     &.right {
       flex-direction: row;
-      right: -55vw;
+      right: -65vw;
 
       &:hover {
         right: 2vw;
@@ -103,6 +107,9 @@ header {
       section:last-of-type {
         width: 55%;
         right: 0;
+        border-bottom: 2rem solid var(--sunray);
+        border-top: 2rem solid var(--lapis);
+        box-shadow: 0.5rem 0.5rem 0 var(--darkred);
       }
     }
 
@@ -114,7 +121,8 @@ header {
       position: absolute;
 
       &:last-of-type {
-        background-color: var(--white);
+        background-color: var(--grey);
+        padding: 4rem 2rem;
       }
     }
   }

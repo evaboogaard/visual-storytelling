@@ -12,6 +12,10 @@
   --black: black;
 }
 
+main {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -27,6 +31,7 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 header {
@@ -56,6 +61,42 @@ header {
 
   h1 {
     font-size: 2.5rem;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  article {
+    border-bottom: 2rem solid var(--lapis);
+    border-top: 2rem solid var(--darkred);
+    box-shadow: 0.5rem 0.5rem 0 var(--sunray);
+    background-color: var(--grey);
+    margin: 5rem 0;
+    padding: 3rem;
+    max-width: 50rem;
+
+    &:nth-child(even) {
+      border-bottom: 2rem solid var(--sunray);
+      border-top: 2rem solid var(--lapis);
+      box-shadow: 0.5rem 0.5rem 0 var(--darkred);
+    }
+
+    p {
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+
+  img {
+    width: 80%;
   }
 }
 
@@ -151,6 +192,34 @@ header {
         background-color: var(--grey);
         padding: 4rem 2rem;
       }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0 0 0;
+  padding: 4rem 0;
+  background-color: var(--lapis);
+
+  section {
+    max-width: 50rem;
+    padding: 1rem;
+
+    h2,
+    h3,
+    p {
+      color: var(--grey);
+    }
+
+    h2,
+    h3 {
+      padding: 1rem 0;
+    }
+
+    a {
+      color: var(--sunray);
     }
   }
 }

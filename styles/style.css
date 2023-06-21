@@ -25,6 +25,10 @@ a {
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 li {
   list-style: none;
 }
@@ -95,6 +99,10 @@ header nav ul img {
 
 .timeline {
   position: relative;
+}
+.timeline-title {
+  display: flex;
+  justify-content: center;
 }
 .timeline .stripe {
   width: 3px;
@@ -177,14 +185,21 @@ footer {
   padding: 4rem 0;
   background-color: var(--lapis);
 }
+footer .creds h2 {
+  font-weight: 400;
+}
 footer section {
   max-width: 50rem;
   padding: 1rem;
 }
+footer section h1,
 footer section h2,
 footer section h3,
 footer section p {
   color: var(--grey);
+}
+footer section h1 {
+  margin-top: 5rem;
 }
 footer section h2,
 footer section h3 {
